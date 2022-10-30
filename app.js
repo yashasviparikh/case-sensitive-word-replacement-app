@@ -9,14 +9,17 @@ const customCss = fs.readFileSync((process.cwd()+"/swagger.css"), 'utf8');//swag
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, {customCss}));//swagger
 
 app.use(bodyParser.json());
-app.listen(3000, function(){
-  console.log("server is running on port 3000");
+app.listen(process.env.PORT || 3000, function(){
+  console.log("server is running");
 })
 
   app.use(bodyParser.urlencoded({
     extended:true
 }));
   
+app.get('/',(req,res)=>{
+  res.redirect('/api-docs');
+});
 app.post("/", function(req, res) {
    
   const stringWordReplace = String(req.body.stringWordReplace); 

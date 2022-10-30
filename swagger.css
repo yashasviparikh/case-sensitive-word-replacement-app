@@ -25,7 +25,3 @@ body {
 .swagger-ui .scheme-container {
     background-color: rgb(238, 176, 61);
 }
-
-.swagger-ui .section.models{
-    display: none;
-}
