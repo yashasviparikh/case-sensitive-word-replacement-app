@@ -52,12 +52,8 @@
     }, 
     "definitions": {
         "stringWordReplace": {
-            "type": "object",
-            "properties": {
-                "stringWordReplace": {
-                    "type": "string"
-                }
-            }
+            "type": "object"
+            
         }
     }
 }
