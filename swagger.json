@@ -52,11 +52,11 @@
     }, 
     "definitions": {
         "stringWordReplace": {
-            "type": "object",
+            "type": "string",
             "properties": {
-                
+                "stringWordReplace": {
                     "type": "string"
-                
+                }
             }
         }
     }
