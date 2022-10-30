@@ -1,0 +1,63 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Case Sensitive Word Replacement API made using Node.js and Express.js",
+        "version": "1.0.0",
+        "title": "Case Sensitive Word Replace API",
+        "contact": {
+            "email": "parikhyashasvi@gmail.com"
+        }
+        
+    },
+    "schemes": ["http"],
+    "host": "localhost:3000",
+    "paths" : {
+        "/api-docs" : {
+            "post" : {
+                "summary" : "Case Sensitive Word Replacement",
+                "description": "Case Sensitive Word Replacement",
+                "consumes": ["application/json"],
+                "produces":"string",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "stringWordReplace",
+                        "description": "stringWordReplace object",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "properties": {
+                                "stringWordReplace" : {
+                                    
+                                    "$ref": "#/definitions/stringWordReplace"
+                                } 
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "schema": {
+                            "type": "string",
+                            "items": {
+                                "$ref": "#/definitions/stringWordReplace"
+                            }
+                        }
+                    }
+                    }
+            }
+        }
+    
+    }, 
+    "definitions": {
+        "stringWordReplace": {
+            "type": "string",
+            "properties": {
+                "stringWordReplace": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
