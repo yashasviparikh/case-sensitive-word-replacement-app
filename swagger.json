@@ -52,7 +52,7 @@
     }, 
     "definitions": {
         "stringWordReplace": {
-            "type": "string",
+           
             "properties": {
                 "stringWordReplace": {
                     "type": "string"
