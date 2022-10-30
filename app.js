@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser")
 //Swagger
-fs = require('fs');
+fs = require('fs');//swagger
 const swaggerUi = require('swagger-ui-express');//swagger
 const swaggerDocument = require('./swagger.json');//swagger
 const customCss = fs.readFileSync((process.cwd()+"/swagger.css"), 'utf8');//swagger
@@ -22,9 +22,9 @@ app.get('/',(req,res)=>{
 });
 app.post("/", function(req, res) {
    
-  const stringWordReplace = String(req.body.stringWordReplace); 
+  var stringWordReplace = String(req.body.stringWordReplace); 
   const arr = ["Oracle","Google", "Microsoft" , "Amazon" , "Deloitte"];
-  const str = stringWordReplace.split(" ");
+  var str = stringWordReplace.split(" ");
   for(let i=0; i <str.length;i++)
   {
     for(var j=0;j <arr.length;j++)
